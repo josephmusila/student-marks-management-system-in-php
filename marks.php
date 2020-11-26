@@ -60,6 +60,8 @@ if(!empty($maths) || !empty($english) || !empty($kiswahili)){
   <div class="container sucess-register">
       
      <div>
+     <a href="index.html">register</a> 
+       <a href="login.php">login</a> 
      <?php
     
           echo $message;

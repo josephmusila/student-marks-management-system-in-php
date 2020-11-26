@@ -48,4 +48,11 @@ a{
     margin: 10px;
     text-decoration: none;
     text-align: center;
+    margin-bottom: 20px;
+}
+button{
+    font-size: 20px;
+    padding: 5px;
+    background-color: orangered;
+    color: white;
 }

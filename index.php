@@ -40,6 +40,8 @@ $message="Hello  $name  You have succesfully registered "
 </head>
 <body>
   <div class="container sucess-register">
+  <a href="index.html">register</a> 
+       <a href="login.php">login</a> 
       <a href="login.php" id="ref">login</a>
      <div>
      <?php

@@ -9,6 +9,7 @@
             $message="invalid email or password";
 
         }else{
+            echo "connected succesfully";
            header("location:details.php");
         }
     }
@@ -25,18 +26,20 @@
 </head>
 <body>
     <div class="container">
-    <div class="message"><?php if($message!="") { echo $message; } ?></div></br>
-    <p>Please enter your details</p>
-        <form method="post" action=" " name="myform">
-          
-            <label for="email">email
-                <input type="text" name="email">
-            </label>
-            <label for="password">password
-                <input type="password" name="password">
-            </label>
-            <input type="submit" id="submit">
-        </form> 
+    <a href="index.html">register</a> 
+       <a href="login.php">login</a> 
+            <div class="message"><?php if($message!="") { echo $message; } ?></div></br>
+            <p>Please enter your details</p>
+                <form method="post" action="" name="myform">
+                
+                    <label for="email">email
+                        <input type="text" name="email" required>
+                    </label>
+                    <label for="password">password
+                        <input type="password" name="password" required>
+                    </label>
+                    <input type="submit" id="submit">
+                </form> 
     </div>
 </body>
 </html>

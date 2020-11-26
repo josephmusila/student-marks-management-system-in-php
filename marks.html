@@ -8,10 +8,11 @@
 </head>
 <body>
     <div class="container">
-        
+        <a href="index.html">register</a> 
+        <a href="login.php">login</a> 
         <form method="post" action="marks.php" name="myform" id="student-form">
             <label for="id">ID
-                <input type="text" name="id" id="id" required autocomplete="off">
+                <input type="number" name="id" id="userid" required autocomplete="off" >
             </label>
             <label for="maths">MATHS
                 <input type="number" name="maths" id="maths" required autocomplete="off">
@@ -26,6 +27,6 @@
             <input type="submit" id="register-submit">
         </form> 
     </div>
-    
+    <script src="index.js"></script>
 </body>
 </html>

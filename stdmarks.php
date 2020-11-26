@@ -1,10 +1,10 @@
 <?php
+    $id=$_POST['id'];
+
     $host="localhost";
     $user="root";
     $pass="";
     $dbname="records";
-
-    $id=['id'];
 
     $conn=mysqli_connect($host,$user,$pass,$dbname);
 
@@ -13,10 +13,22 @@
 
     }
     echo "connected succesfully <br>";
-   
+   $sql='SELECT * FROM marks WHERE id=6757';
+   $retrieval =mysqli_query($conn,$sql);
+
+   if(mysqli_num_rows($retrieval)>0){
+       while($row=mysqli_fetch_assoc($retrieval)){
+           echo "id:{$row['id']} ";
+            echo  "maths:{$row['maths']}  ";
+            echo  "english:{$row['english']}  ";
+            echo  "kiswahili :{$row['kiswahili']}   ";
+            echo  "average :{$row['average']}  ";
+            echo  "grade :{$row['grade']}<br>";
+       }
+    }else{
+       echo "0 results";
+   }
     
-
-
 ?>
 
 <!DOCTYPE html>
@@ -30,13 +42,7 @@
 <body>
     <div class="container">
 
-    <form>
-    <a href="index.html">register</a> 
-       <a href="login.php">login</a> 
-    <p>enter your id to access your results</p>
-    <input type="text" name="id" >
-    <input type="submit">
-</form>
+   
        <a href="index.html">register</a> 
        <a href="login.php">login</a> 
     </div>
